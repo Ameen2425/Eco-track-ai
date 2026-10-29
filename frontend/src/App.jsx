@@ -124,6 +124,7 @@ function AppRoutes() {
             
             {/* Public/Root Route */}
             <Route path="/" element={token ? <Navigate to="/dashboard" /> : <LandingPage />} />
+            <Route path="/landing" element={<LandingPage />} />
 
             {/* Protected App Routes */}
             <Route element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>

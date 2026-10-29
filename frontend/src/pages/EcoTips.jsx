@@ -114,7 +114,7 @@ const EcoTips = () => {
                             </div>
                         </div>
                     )}
-                </motion.div>
+                </div>
 
                 {/* Offset Card */}
                 <div className="neo-card p-8 group relative overflow-hidden shadow-xl border-eco-green/10 border-t-4 border-t-eco-green">
@@ -141,20 +141,7 @@ const EcoTips = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="space-y-4 relative z-10">
-                        <div className="flex items-baseline gap-2">
-                            <span className="font-inter font-black text-5xl text-eco-green tracking-tighter">
-                                {treesNeeded || '0'}
-                            </span>
-                            <span className="text-xs font-black uppercase tracking-widest opacity-40">Trees Needed</span>
-                        </div>
-                        <div className="p-3 rounded-xl bg-eco-green/5 border border-eco-green/10">
-                            <p className="text-[10px] text-eco-green font-bold leading-relaxed">
-                                Requires {treesNeeded} mature trees to absorb your current monthly emissions.
-                            </p>
-                        </div>
-                    </div>
-                </motion.div>
+                </div>
             </div>
 
             {/* AI Recommendations */}

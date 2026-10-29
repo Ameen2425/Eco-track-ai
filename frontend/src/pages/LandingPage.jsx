@@ -79,7 +79,7 @@ const LandingPage = () => {
                     <Link to="/login" className="text-[11px] font-black uppercase tracking-widest text-text-muted hover:text-eco-green transition-colors hidden sm:block">Log In</Link>
                     <Link to="/register" className="btn-neo px-6 py-2.5 shadow-xl shadow-eco-green/10 text-[11px]">Get Started</Link>
                 </div>
-            </motion.nav>
+            </nav>
 
             <main className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto space-y-32">
                 
@@ -177,13 +177,13 @@ const LandingPage = () => {
                                     </AreaChart>
                                 </ResponsiveContainer>
                             </div>
-                        </motion.div>
+                        </div>
 
                         {/* Floating depth */}
                         <div className="absolute -top-12 -right-12 w-48 h-48 bg-analytics-blue rounded-full blur-[100px] opacity-20 animate-pulse" />
                         <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-eco-green rounded-full blur-[120px] opacity-15 animate-pulse" />
                     </motion.div>
-                </motion.section>
+                </section>
 
                 {/* Features */}
                 <section className="space-y-20">
@@ -219,10 +219,10 @@ const LandingPage = () => {
                             desc="Direct integration with validated environmental projects to achieve carbon equilibrium." 
                         />
                     </div>
-                </motion.section>
+                </section>
 
                 {/* Big CTA */}
-                <section className="neo-card p-12 md:p-24 relative overflow-hidden bg-eco-green text-white border-none text-center space-y-10 group shadow-[0_50px_100px_-20px_rgba(22,163,74,0.3)]">
+                <section className="rounded-3xl p-12 md:p-24 relative overflow-hidden bg-eco-green text-white text-center space-y-10 group shadow-[0_50px_100px_-20px_rgba(22,163,74,0.3)]">
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
                     <div className="relative z-10 space-y-6">
                         <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9]">Ready to Synchronize?</h2>
@@ -233,7 +233,7 @@ const LandingPage = () => {
                             <Link to="/register" className="bg-white text-eco-green hover:bg-gray-50 px-12 py-5 rounded-3xl font-black uppercase tracking-widest text-[11px] shadow-2xl transition-all hover:scale-105 active:scale-95">
                                 Initialize Account
                             </Link>
-                            <Link to="/login" className="bg-eco-green border-2 border-white/40 hover:border-white px-12 py-5 rounded-3xl font-black uppercase tracking-widest text-[11px] transition-all">
+                            <Link to="/login" className="bg-eco-green text-white border-2 border-white/40 hover:border-white px-12 py-5 rounded-3xl font-black uppercase tracking-widest text-[11px] transition-all hover:scale-105 active:scale-95">
                                 Member Access
                             </Link>
                         </div>

@@ -224,7 +224,7 @@ const Profile = () => {
             </div>
 
             {/* Password Change */}
-            <div className="neo-card p-6 md:p-8 space-y-5 shadow-sm">
+            <motion.div variants={itemVariants} className="neo-card p-6 md:p-8 space-y-5 shadow-sm">
                 <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-xl bg-analytics-blue/10 flex items-center justify-center text-analytics-blue border border-analytics-blue/20">
                         <Key size={16} />
@@ -233,57 +233,6 @@ const Profile = () => {
                         <h3 className="font-black text-sm uppercase tracking-widest">Change Password</h3>
                         <p className="text-[9px] text-text-muted mt-0.5">Leave blank to keep current password</p>
                     </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                    {[
-                        { key: 'currentPassword', label: 'Current Password' },
-                        { key: 'newPassword',     label: 'New Password' },
-                        { key: 'confirmPassword', label: 'Confirm Password' },
-                    ].map(f => (
-                        <div key={f.key} className="space-y-2">
-                            <label className="text-[9px] font-black uppercase tracking-widest opacity-40">{f.label}</label>
-                            <div className="relative">
-                                <input
-                                    type={showPass ? 'text' : 'password'}
-                                    value={form[f.key]}
-                                    onChange={e => setForm(p => ({ ...p, [f.key]: e.target.value }))}
-                                    placeholder="••••••••"
-                                    className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-900 border border-eco-border focus:border-analytics-blue focus:ring-1 focus:ring-analytics-blue/20 outline-none text-sm transition-all"
-                                />
-                                <button
-                                    type="button"
-                                    onClick={() => setShowPass(p => !p)}
-                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-light dark:hover:text-text-dark transition-colors"
-                                >
-                                    {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
-                                </button>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Save Button */}
-            <button
-                onClick={handleSave}
-                disabled={saving}
-                className="btn-neo py-4 w-full justify-center shadow-xl shadow-eco-green/20 text-[10px] font-black uppercase tracking-widest gap-3 disabled:opacity-60"
-            >
-                {saving ? <Loader size={16} className="animate-spin" /> : <CheckCircle size={16} />}
-                {saving ? 'Saving...' : 'Save Profile'}
-            </button>
-
-            {/* Badges */}
-            <div className="neo-card p-6 md:p-8 space-y-5 shadow-sm">
-                <div>
-                    <h3 className="font-black text-sm uppercase tracking-widest">Sustainability Badges</h3>
-                    <p className="text-[9px] text-text-muted mt-0.5">Earned through your eco journey</p>
-                </div>
-                <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
-                    {badges.map(b => (
-                        <BadgeCard key={b.label} icon={b.emoji} label={b.label} desc={b.desc} active={b.active} />
-                    ))}
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">

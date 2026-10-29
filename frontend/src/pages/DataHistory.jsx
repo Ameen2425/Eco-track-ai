@@ -217,7 +217,7 @@ const DataHistory = () => {
                         <ArrowRight size={13} /> New
                     </Link>
                 </div>
-            </motion.div>
+            </div>
 
             {loading ? (
                 <div className="neo-card p-16 flex flex-col items-center gap-6 text-center">
